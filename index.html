@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aayushi Raj — Art & Craft</title>
+<title>Aayushi Raj — Brush it Off</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -19,7 +19,6 @@
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -30,7 +29,6 @@
     overflow-x: hidden;
   }
 
-  /* ── GRAIN OVERLAY ── */
   body::before {
     content: '';
     position: fixed;
@@ -49,18 +47,46 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 4rem;
-    background: rgba(250, 246, 241, 0.85);
-    backdrop-filter: blur(12px);
+    padding: 1rem 4rem;
+    background: rgba(250, 246, 241, 0.88);
+    backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(212, 168, 154, 0.2);
   }
 
   .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+  }
+
+  .nav-logo img {
+    height: 44px;
+    width: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1.5px solid var(--dusty-rose);
+  }
+
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .nav-logo-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-style: italic;
-    letter-spacing: 0.02em;
     color: var(--warm-brown);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo-channel {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terracotta);
   }
 
   .nav-links {
@@ -94,11 +120,9 @@
 
   .hero-bg-circle {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(240,221,212,0.6) 0%, transparent 70%);
-    right: -100px;
-    top: 50%;
+    right: -100px; top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
     pointer-events: none;
@@ -129,9 +153,28 @@
     margin-bottom: 0.3rem;
   }
 
-  .hero-name span {
+  .hero-name span { font-style: italic; color: var(--terracotta); }
+
+  .hero-channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-channel img {
+    height: 28px; width: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--dusty-rose);
+  }
+
+  .hero-channel-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
     font-style: italic;
     color: var(--terracotta);
+    letter-spacing: 0.04em;
   }
 
   .hero-sub {
@@ -151,11 +194,7 @@
     opacity: 0.85;
   }
 
-  .hero-btns {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .btn-primary {
     background: var(--terracotta);
@@ -172,10 +211,7 @@
     display: inline-block;
   }
 
-  .btn-primary:hover {
-    background: var(--warm-brown);
-    transform: translateY(-2px);
-  }
+  .btn-primary:hover { background: var(--warm-brown); transform: translateY(-2px); }
 
   .btn-outline {
     background: transparent;
@@ -192,16 +228,13 @@
     display: inline-block;
   }
 
-  .btn-outline:hover {
-    background: var(--blush);
-    transform: translateY(-2px);
-  }
+  .btn-outline:hover { background: var(--blush); transform: translateY(-2px); }
 
-  /* ── HERO RIGHT: art collage ── */
+  /* ── HERO RIGHT: real images ── */
   .hero-right {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 1rem;
     padding-top: 6rem;
     animation: fadeUp 1.2s ease both;
@@ -225,43 +258,30 @@
   .art-card:nth-child(1) {
     grid-row: 1 / 3;
     min-height: 370px;
-    background: linear-gradient(145deg, #e8cfc5, #f0ddd4);
   }
 
-  .art-card:nth-child(2) { background: linear-gradient(145deg, #c8d5c0, #ddebd6); }
-  .art-card:nth-child(3) { background: linear-gradient(145deg, #f5e6dc, #edd8cc); }
-  .art-card:nth-child(4) { background: linear-gradient(145deg, #d4b8ae, #c8a99e); }
+  .art-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+  }
 
   .art-card-label {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 1rem; left: 1rem;
     font-size: 0.7rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--warm-brown);
-    background: rgba(250, 246, 241, 0.8);
+    background: rgba(250, 246, 241, 0.85);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     backdrop-filter: blur(4px);
+    z-index: 1;
   }
 
-  .art-card-icon {
-    font-size: 2.5rem;
-    opacity: 0.4;
-  }
-
-  .art-card:nth-child(1) .art-card-icon { font-size: 4rem; }
-
-  /* ── ABOUT ── */
-  .about {
-    padding: 7rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
-
+  /* ── SECTION COMMONS ── */
   .section-eyebrow {
     font-size: 0.72rem;
     letter-spacing: 0.2em;
@@ -280,6 +300,15 @@
 
   .section-title em { font-style: italic; color: var(--terracotta); }
 
+  /* ── ABOUT ── */
+  .about {
+    padding: 7rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
   .about-text {
     font-size: 0.92rem;
     line-height: 1.9;
@@ -288,12 +317,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .about-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 1.5rem;
-  }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
 
   .tag {
     font-size: 0.74rem;
@@ -304,10 +328,6 @@
     border-radius: 20px;
   }
 
-  .about-right {
-    position: relative;
-  }
-
   .about-visual {
     background: linear-gradient(135deg, var(--blush), #e8d5cc);
     border-radius: 24px;
@@ -316,7 +336,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     position: relative;
     overflow: hidden;
   }
@@ -324,16 +344,24 @@
   .about-visual::before {
     content: '';
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 250px; height: 250px;
     background: radial-gradient(circle, rgba(181,112,91,0.15), transparent 70%);
     top: -50px; right: -50px;
     border-radius: 50%;
   }
 
+  /* Logo display in about */
+  .about-logo-display {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(212,168,154,0.5);
+    box-shadow: 0 12px 40px rgba(181,112,91,0.15);
+  }
+
   .about-stat {
     text-align: center;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     background: rgba(250,246,241,0.7);
     border-radius: 16px;
     backdrop-filter: blur(8px);
@@ -342,14 +370,14 @@
 
   .about-stat-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
+    font-size: 1.6rem;
     font-weight: 300;
     color: var(--terracotta);
     line-height: 1;
   }
 
   .about-stat-label {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted-text);
@@ -360,13 +388,9 @@
   .services {
     padding: 6rem 4rem;
     background: var(--blush);
-    position: relative;
   }
 
-  .services-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
+  .services-header { text-align: center; margin-bottom: 4rem; }
 
   .services-grid {
     display: grid;
@@ -387,8 +411,7 @@
     content: '';
     position: absolute;
     bottom: 0; left: 0;
-    width: 100%;
-    height: 3px;
+    width: 100%; height: 3px;
     background: linear-gradient(90deg, var(--dusty-rose), var(--terracotta));
     transform: scaleX(0);
     transform-origin: left;
@@ -396,16 +419,9 @@
   }
 
   .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(181,112,91,0.12); }
 
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(181, 112, 91, 0.12);
-  }
-
-  .service-icon {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-  }
+  .service-icon { font-size: 2rem; margin-bottom: 1.2rem; }
 
   .service-title {
     font-family: 'Cormorant Garamond', serif;
@@ -415,16 +431,10 @@
     color: var(--warm-brown);
   }
 
-  .service-desc {
-    font-size: 0.86rem;
-    line-height: 1.8;
-    color: var(--muted-text);
-  }
+  .service-desc { font-size: 0.86rem; line-height: 1.8; color: var(--muted-text); }
 
   /* ── GALLERY ── */
-  .gallery {
-    padding: 7rem 4rem;
-  }
+  .gallery { padding: 7rem 4rem; }
 
   .gallery-header {
     display: flex;
@@ -446,20 +456,18 @@
     position: relative;
     cursor: pointer;
     background: var(--blush);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
   .gallery-item:nth-child(4) { grid-column: span 2; }
 
-  .gallery-item:nth-child(1) { background: linear-gradient(135deg, #e8cfc5, #d4b0a0); }
-  .gallery-item:nth-child(2) { background: linear-gradient(135deg, #c8d5c0, #adc4a2); }
-  .gallery-item:nth-child(3) { background: linear-gradient(135deg, #f5e2d6, #eaccbc); }
-  .gallery-item:nth-child(4) { background: linear-gradient(135deg, #e0d0c8, #cfc0b5); }
-  .gallery-item:nth-child(5) { background: linear-gradient(135deg, #d8c8c0, #c4b0a8); }
-  .gallery-item:nth-child(6) { background: linear-gradient(135deg, #ead4c8, #d8bfb2); }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .gallery-item:hover img { transform: scale(1.05); }
 
   .gallery-overlay {
     position: absolute;
@@ -467,37 +475,25 @@
     background: rgba(58, 40, 32, 0);
     transition: background 0.4s;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: flex-end;
+    padding: 1.5rem;
   }
 
-  .gallery-item:hover .gallery-overlay {
-    background: rgba(58, 40, 32, 0.45);
-  }
+  .gallery-item:hover .gallery-overlay { background: rgba(58, 40, 32, 0.45); }
 
   .gallery-overlay-text {
     color: white;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
     transition: all 0.3s;
   }
 
-  .gallery-item:hover .gallery-overlay-text {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .gallery-item:hover .gallery-overlay-text { opacity: 1; transform: translateY(0); }
 
-  .gallery-placeholder-icon {
-    font-size: 3rem;
-    opacity: 0.3;
-  }
-
-  /* ── AI INTEREST SECTION ── */
+  /* ── AI SECTION ── */
   .ai-section {
     padding: 6rem 4rem;
     background: linear-gradient(135deg, #f5ede8, #ead5cc);
@@ -508,9 +504,8 @@
   .ai-section::before {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(200, 213, 192, 0.4), transparent 70%);
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(200,213,192,0.4), transparent 70%);
     top: -100px; right: 10%;
     border-radius: 50%;
   }
@@ -524,12 +519,7 @@
     z-index: 1;
   }
 
-  .ai-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 2rem;
-  }
+  .ai-chips { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
 
   .ai-chip {
     background: rgba(250, 246, 241, 0.8);
@@ -561,46 +551,27 @@
   }
 
   /* ── INSTAGRAM ── */
-  .instagram {
-    padding: 6rem 4rem;
-    text-align: center;
-  }
+  .instagram { padding: 6rem 4rem; text-align: center; }
 
   .insta-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
-    margin: 3rem 0;
+    margin: 3rem auto;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .insta-item {
     aspect-ratio: 1;
     border-radius: 12px;
-    background: var(--blush);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    opacity: 0.6;
-    transition: opacity 0.3s;
+    overflow: hidden;
     cursor: pointer;
+    transition: transform 0.3s;
   }
 
-  .insta-item:hover { opacity: 1; }
+  .insta-item:hover { transform: scale(1.04); }
 
-  .insta-colors {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .insta-item:nth-child(1) { background: linear-gradient(135deg, #e8c9be, #d4a899); }
-  .insta-item:nth-child(2) { background: linear-gradient(135deg, #c4d4bc, #aac4a0); }
-  .insta-item:nth-child(3) { background: linear-gradient(135deg, #eacec4, #d8b8ae); }
-  .insta-item:nth-child(4) { background: linear-gradient(135deg, #d8c4bc, #c8b0a8); }
+  .insta-item img { width: 100%; height: 100%; object-fit: cover; }
 
   /* ── CONTACT ── */
   .contact {
@@ -623,9 +594,7 @@
   }
 
   .contact-inner { position: relative; z-index: 1; }
-
   .contact .section-eyebrow { color: var(--dusty-rose); }
-
   .contact .section-title { color: var(--cream); }
   .contact .section-title em { color: var(--dusty-rose); }
 
@@ -637,12 +606,7 @@
     line-height: 1.9;
   }
 
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
+  .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
 
   .contact-link {
     display: flex;
@@ -659,11 +623,7 @@
     transition: all 0.3s;
   }
 
-  .contact-link:hover {
-    background: var(--terracotta);
-    border-color: var(--terracotta);
-    transform: translateY(-3px);
-  }
+  .contact-link:hover { background: var(--terracotta); border-color: var(--terracotta); transform: translateY(-3px); }
 
   /* ── FOOTER ── */
   footer {
@@ -675,10 +635,17 @@
     align-items: center;
   }
 
-  footer p {
-    font-size: 0.78rem;
-    color: rgba(250,246,241,0.35);
-    letter-spacing: 0.06em;
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .footer-left img {
+    height: 30px; width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.7;
   }
 
   .footer-logo {
@@ -687,6 +654,8 @@
     color: rgba(250,246,241,0.5);
     font-size: 1rem;
   }
+
+  footer p { font-size: 0.78rem; color: rgba(250,246,241,0.3); letter-spacing: 0.06em; }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -700,19 +669,16 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 1.2rem 2rem; }
+    nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .hero, .about, .ai-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .hero { padding: 6rem 2rem 3rem; }
+    .hero { padding: 6rem 1.5rem 3rem; }
     .hero-right { display: none; }
-    .about, .services, .gallery, .instagram, .contact { padding: 4rem 2rem; }
+    .about, .services, .gallery, .instagram, .contact { padding: 4rem 1.5rem; }
     .services-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .gallery-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
@@ -726,7 +692,13 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Aayushi Raj</div>
+  <a class="nav-logo" href="#home">
+    <img src="images/logo.jpeg" alt="Brush it Off Logo">
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Aayushi Raj</span>
+      <span class="nav-logo-channel">Brush it Off</span>
+    </div>
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -741,6 +713,10 @@
   <div class="hero-left">
     <span class="hero-tag">✦ Artist & Creator</span>
     <h1 class="hero-name">Aayushi<br><span>Raj</span></h1>
+    <div class="hero-channel">
+      <img src="images/logo.jpeg" alt="Brush it Off">
+      <span class="hero-channel-name">Brush it Off · Art Channel</span>
+    </div>
     <p class="hero-sub">Painting · Sketching · DIY Craft</p>
     <p class="hero-desc">
       Creating art that speaks softly and stays with you. From delicate watercolour strokes to handcrafted pieces — every creation holds a little piece of heart. Also exploring the beautiful intersection of traditional art and AI.
@@ -752,19 +728,19 @@
   </div>
   <div class="hero-right">
     <div class="art-card">
-      <span class="art-card-icon">🎨</span>
+      <img src="images/hero-1.jpeg" alt="Painting">
       <span class="art-card-label">Painting</span>
     </div>
     <div class="art-card">
-      <span class="art-card-icon">✏️</span>
+      <img src="images/hero-2.jpeg" alt="Sketch">
       <span class="art-card-label">Sketch</span>
     </div>
     <div class="art-card">
-      <span class="art-card-icon">🌿</span>
+      <img src="images/hero-3.jpeg" alt="DIY">
       <span class="art-card-label">DIY</span>
     </div>
     <div class="art-card">
-      <span class="art-card-icon">✨</span>
+      <img src="images/hero-4.jpeg" alt="AI Art">
       <span class="art-card-label">AI Art</span>
     </div>
   </div>
@@ -779,7 +755,7 @@
       Hi, I'm Aayushi — an artist, student, and creator based in India. I've loved art since I can remember, and over the years I've found my language in paintings, pencil sketches, and handcrafted DIY pieces.
     </p>
     <p class="about-text">
-      I run <strong>Aayushi Art's</strong> on Instagram, where I share my journey, process videos, and finished pieces. Right now I'm also exploring how AI can be a creative partner — from AI-generated art to blending technology with traditional craft.
+      I run <strong>Brush it Off</strong> — my art channel where I share my journey, process videos, and finished pieces. Right now I'm also exploring how AI can be a creative partner — from AI-generated art to blending technology with traditional craft.
     </p>
     <div class="about-tags">
       <span class="tag">Watercolour</span>
@@ -792,13 +768,14 @@
   </div>
   <div class="about-right reveal">
     <div class="about-visual">
+      <img class="about-logo-display" src="images/logo.jpeg" alt="Brush it Off">
+      <div class="about-stat">
+        <div class="about-stat-num">Brush it Off</div>
+        <div class="about-stat-label">Art Channel · Creator</div>
+      </div>
       <div class="about-stat">
         <div class="about-stat-num">∞</div>
         <div class="about-stat-label">Ideas in sketchbook</div>
-      </div>
-      <div class="about-stat" style="margin-top: 1rem;">
-        <div class="about-stat-num" style="font-size:1.8rem;">Aayushi Art's</div>
-        <div class="about-stat-label">on Instagram</div>
       </div>
     </div>
   </div>
@@ -840,45 +817,30 @@
   </div>
   <div class="gallery-grid reveal">
     <div class="gallery-item">
-      <span class="gallery-placeholder-icon">🎨</span>
-      <div class="gallery-overlay">
-        <span class="gallery-overlay-text">Painting</span>
-      </div>
+      <img src="images/gallery-1.jpeg" alt="Painting">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Painting</span></div>
     </div>
     <div class="gallery-item">
-      <span class="gallery-placeholder-icon">✏️</span>
-      <div class="gallery-overlay">
-        <span class="gallery-overlay-text">Sketch</span>
-      </div>
+      <img src="images/gallery-2.jpeg" alt="Sketch">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Sketch</span></div>
     </div>
     <div class="gallery-item">
-      <span class="gallery-placeholder-icon">🌿</span>
-      <div class="gallery-overlay">
-        <span class="gallery-overlay-text">DIY Craft</span>
-      </div>
+      <img src="images/gallery-3.jpeg" alt="DIY Craft">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">DIY Craft</span></div>
     </div>
     <div class="gallery-item">
-      <span class="gallery-placeholder-icon">🖼️</span>
-      <div class="gallery-overlay">
-        <span class="gallery-overlay-text">Mixed Media</span>
-      </div>
+      <img src="images/gallery-4.jpeg" alt="Mixed Media">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Mixed Media</span></div>
     </div>
     <div class="gallery-item">
-      <span class="gallery-placeholder-icon">🌸</span>
-      <div class="gallery-overlay">
-        <span class="gallery-overlay-text">Botanical</span>
-      </div>
+      <img src="images/gallery-5.jpeg" alt="Botanical">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Botanical</span></div>
     </div>
     <div class="gallery-item">
-      <span class="gallery-placeholder-icon">✨</span>
-      <div class="gallery-overlay">
-        <span class="gallery-overlay-text">AI + Art</span>
-      </div>
+      <img src="images/gallery-6.jpeg" alt="AI + Art">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">AI + Art</span></div>
     </div>
   </div>
-  <p style="text-align:center; margin-top:2rem; font-size:0.8rem; color:var(--muted-text); font-style:italic;">
-    ↑ Replace placeholder cards with your actual artwork images
-  </p>
 </section>
 
 <!-- AI SECTION -->
@@ -908,16 +870,16 @@
 <section class="instagram" id="instagram">
   <div class="reveal">
     <p class="section-eyebrow">✦ Instagram</p>
-    <h2 class="section-title">Follow along on<br><em>Aayushi Art's</em></h2>
+    <h2 class="section-title">Follow along on<br><em>Brush it Off</em></h2>
     <p style="font-size:0.9rem; color:var(--muted-text); margin-top:0.5rem; margin-bottom:2rem;">Sneak peeks, process videos & finished pieces</p>
   </div>
   <div class="insta-grid reveal">
-    <div class="insta-item">🎨</div>
-    <div class="insta-item">✏️</div>
-    <div class="insta-item">🌿</div>
-    <div class="insta-item">✨</div>
+    <div class="insta-item"><img src="images/insta-1.jpeg" alt="Post 1"></div>
+    <div class="insta-item"><img src="images/insta-2.jpeg" alt="Post 2"></div>
+    <div class="insta-item"><img src="images/insta-3.jpeg" alt="Post 3"></div>
+    <div class="insta-item"><img src="images/insta-4.jpeg" alt="Post 4"></div>
   </div>
-  <a href="https://instagram.com/" target="_blank" class="btn-primary">@AayushiArts on Instagram</a>
+  <a href="https://instagram.com/brushitoff" target="_blank" class="btn-primary">@brushitoff on Instagram</a>
 </section>
 
 <!-- CONTACT -->
@@ -927,27 +889,23 @@
     <h2 class="section-title">Let's create something<br><em>beautiful together</em></h2>
     <p class="contact-desc">Whether it's a custom commission, a collaboration, or just a conversation about art — I'd love to hear from you.</p>
     <div class="contact-links">
-      <a href="https://instagram.com/" target="_blank" class="contact-link">
-        📸 Instagram
-      </a>
-      <a href="mailto:aayushi@email.com" class="contact-link">
-        ✉️ Email Me
-      </a>
-      <a href="#" class="contact-link">
-        🛍️ Shop Art Pieces
-      </a>
+      <a href="https://instagram.com/brushitoff" target="_blank" class="contact-link">📸 Instagram</a>
+      <a href="mailto:aayushi@email.com" class="contact-link">✉️ Email Me</a>
+      <a href="#" class="contact-link">🛍️ Shop Art Pieces</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-logo">Aayushi Raj</span>
-  <p>© 2025 Aayushi Art's · Made with love & colour</p>
+  <div class="footer-left">
+    <img src="images/logo.jpeg" alt="Brush it Off">
+    <span class="footer-logo">Brush it Off</span>
+  </div>
+  <p>© 2025 Aayushi Raj · Made with love & colour</p>
 </footer>
 
 <script>
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -958,12 +916,9 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Smooth parallax on hero bg circle
   window.addEventListener('scroll', () => {
     const circle = document.querySelector('.hero-bg-circle');
-    if (circle) {
-      circle.style.transform = `translateY(calc(-50% + ${window.scrollY * 0.15}px))`;
-    }
+    if (circle) circle.style.transform = `translateY(calc(-50% + ${window.scrollY * 0.15}px))`;
   });
 </script>
 </body>
