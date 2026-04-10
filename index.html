@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brush It Off by Aayushi – A painter and artist creating soulful, culturally rooted works on canvas.">
+  <title>Brush It Off | Aayushi – Painter & Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- Ambient Glow Orbs -->
+<div class="ambient-glow">
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+</div>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"><div class="cursor-ball"></div></div>
+
+<!-- Page Skin -->
+<div class="page-skin" id="page-skin"></div>
+
+<!-- ART CARD PANEL (shared) -->
+<div class="art-card-overlay" id="art-card-overlay"></div>
+<div class="art-card-panel" id="art-card-panel">
+  <button class="art-card-close" id="art-card-close">✕</button>
+  <div class="art-card-img-wrap">
+    <img id="art-card-img" src="" alt="">
+    <div class="art-card-img-badge" id="art-card-badge">Original</div>
+  </div>
+  <div class="art-card-body">
+    <p class="art-card-label">Brush It Off — Original Artwork</p>
+    <h2 class="art-card-title" id="art-card-title">—</h2>
+    <p class="art-card-medium" id="art-card-medium">—</p>
+    <div class="art-card-divider"></div>
+    <div class="art-card-price" id="art-card-price">—</div>
+    <p class="art-card-desc" id="art-card-desc">—</p>
+    <div class="art-card-actions">
+      <a href="contact.html" class="btn-primary nav-link">Inquire to Purchase →</a>
+      <a href="gallery.html" class="btn-outline nav-link">View Full Exhibition</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="transparent" id="header">
+  <a href="index.html" class="logo-wrap nav-link">
+    <img src="assets/logo.jpg" alt="Brush It Off Logo" onerror="this.style.display='none'">
+    Brush It Off
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active nav-link">Home</a></li>
+      <li><a href="gallery.html" class="nav-link">Exhibition</a></li>
+      <li><a href="about.html" class="nav-link">Artist</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Painter &amp; Artist</p>
+    <h1 class="hero-title">
+      Colors<br>are my<br><em>voice.</em>
+    </h1>
+    <div class="hero-actions">
+      <a href="gallery.html" class="btn-primary nav-link">Enter Exhibition</a>
+      <span class="hero-scroll-hint">Scroll to explore</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="assets/hero-1.jpeg" alt="Featured Artwork by Aayushi">
+    <span class="hero-right-caption">Aayushi — 2026</span>
+  </div>
+</section>
+
+<!-- SCROLLING TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>Canvas Painting</span><span class="sep">✦</span>
+    <span>Mandala Art</span><span class="sep">✦</span>
+    <span>Folk Art</span><span class="sep">✦</span>
+    <span>Abstract Cubism</span><span class="sep">✦</span>
+    <span>Expressive Portraits</span><span class="sep">✦</span>
+    <span>Spiritual Themes</span><span class="sep">✦</span>
+    <span>Brush It Off</span><span class="sep">✦</span>
+    <span>Canvas Painting</span><span class="sep">✦</span>
+    <span>Mandala Art</span><span class="sep">✦</span>
+    <span>Folk Art</span><span class="sep">✦</span>
+    <span>Abstract Cubism</span><span class="sep">✦</span>
+    <span>Expressive Portraits</span><span class="sep">✦</span>
+    <span>Spiritual Themes</span><span class="sep">✦</span>
+    <span>Brush It Off</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip reveal">
+  <blockquote>"Art is the lie that enables us to realize the truth."</blockquote>
+  <div class="intro-strip-right">
+    <p>
+      Welcome to <strong>Brush It Off</strong> — a visual journey through canvas, pigment, and soul. Each artwork by Aayushi is a story woven with bold color, cultural reverence, and fierce emotional honesty. From intricate mandalas to vibrant folk figures and cubist portraits, the works span tradition and contemporary expression.
+    </p>
+    <a href="about.html" class="btn-outline nav-link">Meet the Artist</a>
+  </div>
+</div>
+
+<!-- FEATURED WORKS -->
+<section class="featured">
+  <div class="featured-header">
+    <div>
+      <p class="section-label">Selected Works</p>
+      <h2 class="reveal">Featured<br><em style="font-style:italic;color:var(--clay);">Exhibition</em></h2>
+    </div>
+    <a href="gallery.html" class="btn-outline nav-link reveal">View All Works</a>
+  </div>
+
+  <div class="bento-grid stagger">
+    <div class="bento-item bento-1" data-title="Divine Harmony" data-medium="Canvas · Acrylic · 2025" data-price="₹2,800">
+      <img src="assets/hero-1.jpeg" alt="Divine Harmony">
+      <div class="bento-caption"><h3>Divine Harmony</h3><span>Canvas · 2025</span></div>
+    </div>
+    <div class="bento-item bento-2" data-title="Radha's Reverie" data-medium="Canvas · 2024" data-price="₹3,000">
+      <img src="assets/hero-2.jpeg" alt="Radha's Reverie">
+      <div class="bento-caption"><h3>Radha's Reverie</h3><span>Canvas · 2024</span></div>
+    </div>
+    <div class="bento-item bento-3" data-title="Warm Horizon" data-medium="Acrylic · 2024" data-price="₹2,400">
+      <img src="assets/hero-3.jpeg" alt="Warm Horizon">
+      <div class="bento-caption"><h3>Warm Horizon</h3><span>Acrylic · 2024</span></div>
+    </div>
+    <div class="bento-item bento-4" data-title="Golden Hour" data-medium="Canvas · 2024" data-price="₹2,600">
+      <img src="assets/hero-4.jpeg" alt="Golden Hour">
+      <div class="bento-caption"><h3>Golden Hour</h3><span>Canvas · 2024</span></div>
+    </div>
+    <div class="bento-item bento-5" data-title="Spirit of the Earth" data-medium="Canvas · 2025" data-price="₹3,500">
+      <img src="assets/gallery-6.jpeg" alt="Spirit of the Earth">
+      <div class="bento-caption"><h3>Spirit of the Earth</h3><span>Canvas · 2025</span></div>
+    </div>
+    <div class="bento-item bento-6" data-title="Sunset Rhythm" data-medium="Acrylic · 2025" data-price="₹2,500">
+      <img src="assets/1.jpg" alt="Sunset Rhythm">
+      <div class="bento-caption"><h3>Sunset Rhythm</h3><span>Acrylic · 2025</span></div>
+    </div>
+    <div class="bento-item bento-7" data-title="Desert Queen" data-medium="Mixed Media · 2024" data-price="₹2,400">
+      <img src="assets/2.jpg" alt="Desert Queen">
+      <div class="bento-caption"><h3>Desert Queen</h3><span>Mixed Media · 2024</span></div>
+    </div>
+    <div class="bento-item bento-8" data-title="Folk Dancer" data-medium="Acrylic · 2024" data-price="₹2,300">
+      <img src="assets/3.jpg" alt="Folk Dancer">
+      <div class="bento-caption"><h3>Folk Dancer</h3><span>Acrylic · 2024</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="about-teaser">
+  <div class="teaser-img-wrap reveal-left">
+    <img src="assets/artist-photo.jpg" alt="Aayushi — Artist Portrait">
+  </div>
+  <div class="teaser-text reveal-right">
+    <p class="section-label">The Artist</p>
+    <h2>A painter who speaks in <em>color</em> and culture.</h2>
+    <p>
+      Aayushi is a self-taught painter who has developed a uniquely vibrant and culturally charged artistic identity. Her work explores the intersection of Indian folk traditions and bold contemporary aesthetics — from devotional imagery and mandala patterns to abstract cubist figures.
+    </p>
+    <div class="teaser-stats stagger">
+      <div>
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Original Works</div>
+      </div>
+      <div>
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Art Styles</div>
+      </div>
+      <div>
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Stories Told</div>
+      </div>
+    </div>
+    <a href="about.html" class="btn-primary nav-link">Full Story</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <p class="section-label">My Process</p>
+  <h2 class="reveal">How each painting<br>comes to <em style="font-style:italic;">life.</em></h2>
+  <div class="process-grid stagger">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h3>Concept &amp; Research</h3>
+      <p>Every artwork starts with a story. Whether drawn from mythology, daily life, or abstract emotions — the idea is deeply researched and felt before any brush touches the canvas.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h3>Sketching &amp; Composition</h3>
+      <p>The layout is hand-sketched to establish bold visual compositions, dynamic proportions, and intentional negative space that gives the painting room to breathe.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h3>Color &amp; Layering</h3>
+      <p>Colors are never chosen carelessly. Aayushi layers pigment with deliberate emotional intent — building warmth, contrast, and harmony that speaks before words can.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h3>Details &amp; Finishing</h3>
+      <p>The final stage is an intimate conversation between the artist and the piece — refining contours, adding texture, and sealing it with the quiet confidence of a signature.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECOND TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track" style="animation-direction: reverse;">
+    <span>Commissions Open</span><span class="sep">✦</span>
+    <span>Original Artworks</span><span class="sep">✦</span>
+    <span>Hand-painted</span><span class="sep">✦</span>
+    <span>@brush_it_0ff</span><span class="sep">✦</span>
+    <span>Made with love</span><span class="sep">✦</span>
+    <span>Commissions Open</span><span class="sep">✦</span>
+    <span>Original Artworks</span><span class="sep">✦</span>
+    <span>Hand-painted</span><span class="sep">✦</span>
+    <span>@brush_it_0ff</span><span class="sep">✦</span>
+    <span>Made with love</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="logo-wrap nav-link" style="margin-bottom:1.5rem;display:flex;">
+      <img src="assets/logo.jpg" alt="Logo" onerror="this.style.display='none'">
+      Brush It Off
+    </a>
+    <p>An art studio and portfolio by Aayushi — painter, artist, and visual storyteller based in India.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="gallery.html" class="nav-link">Exhibition</a>
+    <a href="about.html" class="nav-link">Artist</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://www.instagram.com/brush_it_0ff/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="mailto:rajsinhaaayushifr16@gmail.com">Email</a>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Brush It Off by Aayushi. All Rights Reserved.</span>
+    <span>Made with ♥ and paint.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

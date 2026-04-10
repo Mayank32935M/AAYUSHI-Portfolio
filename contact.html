@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Aayushi — Brush It Off. Commissions, collaborations and inquiries.">
+  <title>Contact | Brush It Off</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+<div class="ambient-glow">
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+</div>
+
+<div class="cursor" id="cursor"><div class="cursor-ball"></div></div>
+<div class="page-skin" id="page-skin"></div>
+
+
+<header class="solid" id="header">
+  <a href="index.html" class="logo-wrap nav-link">
+    <img src="assets/logo.jpg" alt="Brush It Off Logo" onerror="this.style.display='none'">
+    Brush It Off
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="gallery.html" class="nav-link">Exhibition</a></li>
+      <li><a href="about.html" class="nav-link">Artist</a></li>
+      <li><a href="contact.html" class="active nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="contact-hero">
+
+  <!-- LEFT SIDE: Info -->
+  <div class="contact-left">
+    <p class="section-label" style="color:var(--gold);">Get in Touch</p>
+    <h1>Let's create<br><em>together.</em></h1>
+
+    <div class="contact-info-list">
+      <div class="contact-info-item">
+        <label>Name</label>
+        <span>Aayushi Rajsinha</span>
+      </div>
+      <div class="contact-info-item">
+        <label>Email</label>
+        <a href="mailto:rajsinhaaayushifr16@gmail.com">rajsinhaaayushifr16@gmail.com</a>
+      </div>
+      <div class="contact-info-item">
+        <label>Instagram</label>
+        <a href="https://www.instagram.com/brush_it_0ff/" target="_blank" rel="noopener noreferrer">@brush_it_0ff</a>
+      </div>
+      <div class="contact-info-item">
+        <label>Location</label>
+        <span>India</span>
+      </div>
+      <div class="contact-info-item">
+        <label>Availability</label>
+        <span>Open for Commissions ✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: Form -->
+  <div class="contact-right">
+    <form class="contact-form" action="https://formspree.io/f/xnjokkob" method="POST">
+      <h2>Send a message</h2>
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="">Select inquiry type…</option>
+          <option value="Commission a Painting">Commission a Painting</option>
+          <option value="Purchase Existing Work">Purchase Existing Work</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="General Inquiry">General Inquiry</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell me about your vision…" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+    </form>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="logo-wrap nav-link" style="margin-bottom:1.5rem;display:flex;">
+      <img src="assets/logo.jpg" alt="Logo" onerror="this.style.display='none'">Brush It Off
+    </a>
+    <p>An art studio and portfolio by Aayushi — painter, artist, and visual storyteller based in India.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="gallery.html" class="nav-link">Exhibition</a>
+    <a href="about.html" class="nav-link">Artist</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://www.instagram.com/brush_it_0ff/" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:rajsinhaaayushifr16@gmail.com">Email</a>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Brush It Off by Aayushi.</span>
+    <span>Made with ♥ and paint.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

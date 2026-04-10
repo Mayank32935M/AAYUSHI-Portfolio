@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and purchase original paintings by Aayushi — Brush It Off Exhibition.">
+  <title>Exhibition | Brush It Off</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+<div class="ambient-glow">
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+</div>
+
+<div class="cursor" id="cursor"><div class="cursor-ball"></div></div>
+<div class="page-skin" id="page-skin"></div>
+
+<!-- Count Badge -->
+<div class="gallery-count-badge" id="gallery-badge">13 Works</div>
+
+<!-- ART CARD PANEL -->
+<div class="art-card-overlay" id="art-card-overlay"></div>
+<div class="art-card-panel" id="art-card-panel">
+  <div class="art-card-img-wrap">
+    <img id="art-card-img" src="" alt="Artwork">
+    <span class="art-card-img-badge" id="art-card-badge">Canvas</span>
+    <button class="art-card-close" id="art-card-close">✕</button>
+  </div>
+  <div class="art-card-body">
+    <span class="art-card-label">Original Artwork</span>
+    <h2 class="art-card-title" id="art-card-title">Title</h2>
+    <p class="art-card-medium" id="art-card-medium">Medium</p>
+    <div class="art-card-divider"></div>
+    <p class="art-card-price" id="art-card-price">₹0</p>
+    <p class="art-card-desc" id="art-card-desc">Description</p>
+    <div class="art-card-actions">
+      <a href="contact.html" class="btn-primary nav-link">Purchase Inquiry →</a>
+      <a href="contact.html" class="btn-outline nav-link">Ask a Question</a>
+    </div>
+  </div>
+</div>
+
+<header class="solid" id="header">
+  <a href="index.html" class="logo-wrap nav-link">
+    <img src="assets/logo.jpg" alt="Brush It Off Logo" onerror="this.style.display='none'">Brush It Off
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="gallery.html" class="active nav-link">Exhibition</a></li>
+      <li><a href="about.html" class="nav-link">Artist</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- GALLERY HERO -->
+<section class="gallery-page-hero">
+  <h1 class="reveal">The<br><em>Exhibition.</em></h1>
+</section>
+
+<!-- FILTERS -->
+<div class="gallery-filters">
+  <button class="filter-btn active" data-filter="all">All Works</button>
+  <button class="filter-btn" data-filter="canvas">Canvas</button>
+  <button class="filter-btn" data-filter="folk">Folk</button>
+  <button class="filter-btn" data-filter="mandala">Mandala</button>
+  <button class="filter-btn" data-filter="abstract">Abstract</button>
+</div>
+
+<!-- MASONRY GALLERY -->
+<div class="gallery-masonry" id="gallery-masonry">
+
+  <div class="masonry-item anim-in" data-category="canvas" data-title="Divine Harmony" data-medium="Canvas · Acrylic · 2025" data-price="₹2,800" style="animation-delay:0.05s">
+    <img src="assets/hero-1.jpeg" alt="Divine Harmony">
+    <div class="masonry-caption">
+      <h3>Divine Harmony</h3>
+      <p>Canvas · Acrylic · 2025</p>
+      <div class="price-tag">₹2,800</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="abstract" data-title="Radha's Reverie" data-medium="Canvas · 2024" data-price="₹3,000" style="animation-delay:0.1s">
+    <img src="assets/hero-2.jpeg" alt="Radha's Reverie">
+    <div class="masonry-caption">
+      <h3>Radha's Reverie</h3>
+      <p>Canvas · 2024</p>
+      <div class="price-tag">₹3,000</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="folk" data-title="Warm Horizon" data-medium="Acrylic · 2024" data-price="₹2,400" style="animation-delay:0.15s">
+    <img src="assets/hero-3.jpeg" alt="Warm Horizon">
+    <div class="masonry-caption">
+      <h3>Warm Horizon</h3>
+      <p>Acrylic · 2024</p>
+      <div class="price-tag">₹2,400</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="canvas" data-title="Golden Hour" data-medium="Canvas · 2024" data-price="₹2,600" style="animation-delay:0.2s">
+    <img src="assets/hero-4.jpeg" alt="Golden Hour">
+    <div class="masonry-caption">
+      <h3>Golden Hour</h3>
+      <p>Canvas · 2024</p>
+      <div class="price-tag">₹2,600</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="canvas" data-title="Spirit of the Earth" data-medium="Canvas · 2025" data-price="₹3,500" style="animation-delay:0.25s">
+    <img src="assets/gallery-6.jpeg" alt="Spirit of the Earth">
+    <div class="masonry-caption">
+      <h3>Spirit of the Earth</h3>
+      <p>Canvas · 2025</p>
+      <div class="price-tag">₹3,500</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="folk" data-title="Sunset Rhythm" data-medium="Acrylic · 2025" data-price="₹2,500" style="animation-delay:0.3s">
+    <img src="assets/1.jpg" alt="Sunset Rhythm">
+    <div class="masonry-caption">
+      <h3>Sunset Rhythm</h3>
+      <p>Acrylic · 2025</p>
+      <div class="price-tag">₹2,500</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="folk" data-title="Desert Queen" data-medium="Mixed Media · 2024" data-price="₹2,400" style="animation-delay:0.35s">
+    <img src="assets/2.jpg" alt="Desert Queen">
+    <div class="masonry-caption">
+      <h3>Desert Queen</h3>
+      <p>Mixed Media · 2024</p>
+      <div class="price-tag">₹2,400</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="abstract" data-title="Folk Dancer" data-medium="Acrylic · 2024" data-price="₹2,300" style="animation-delay:0.4s">
+    <img src="assets/3.jpg" alt="Folk Dancer">
+    <div class="masonry-caption">
+      <h3>Folk Dancer</h3>
+      <p>Acrylic · 2024</p>
+      <div class="price-tag">₹2,300</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="canvas" data-title="Sacred Bond" data-medium="Canvas · 2025" data-price="₹3,200" style="animation-delay:0.45s">
+    <img src="assets/4.jpg" alt="Sacred Bond">
+    <div class="masonry-caption">
+      <h3>Sacred Bond</h3>
+      <p>Canvas · 2025</p>
+      <div class="price-tag">₹3,200</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="mandala" data-title="Fire Mandala" data-medium="Dot Art · 2025" data-price="₹1,800" style="animation-delay:0.5s">
+    <img src="assets/5.jpg" alt="Fire Mandala">
+    <div class="masonry-caption">
+      <h3>Fire Mandala</h3>
+      <p>Dot Art · 2025</p>
+      <div class="price-tag">₹1,800</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="canvas" data-title="Quiet Storm" data-medium="Canvas · 2024" data-price="₹2,700" style="animation-delay:0.55s">
+    <img src="assets/WhatsApp Image 2026-03-29 at 10.49.45 PM (2).jpeg" alt="Quiet Storm">
+    <div class="masonry-caption">
+      <h3>Quiet Storm</h3>
+      <p>Canvas · 2024</p>
+      <div class="price-tag">₹2,700</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="folk" data-title="Melodies of Folk" data-medium="Mixed Media · 2024" data-price="₹2,400" style="animation-delay:0.6s">
+    <img src="assets/WhatsApp Image 2026-03-29 at 10.49.45 PM.jpeg" alt="Melodies of Folk">
+    <div class="masonry-caption">
+      <h3>Melodies of Folk</h3>
+      <p>Mixed Media · 2024</p>
+      <div class="price-tag">₹2,400</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="masonry-item anim-in" data-category="abstract" data-title="Inward Gaze" data-medium="Canvas · 2024" data-price="₹2,000" style="animation-delay:0.65s">
+    <img src="assets/WhatsApp Image 2026-03-29 at 10.49.46 PM.jpeg" alt="Inward Gaze">
+    <div class="masonry-caption">
+      <h3>Inward Gaze</h3>
+      <p>Canvas · 2024</p>
+      <div class="price-tag">₹2,000</div>
+      <div class="price-actions">
+        <button class="price-btn buy open-modal">View &amp; Buy</button>
+        <button class="price-btn inquire open-modal">Inquire</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMMISSION SECTION -->
+<section class="commission-section">
+  <div class="commission-left reveal-left">
+    <p class="section-label" style="color:var(--gold);">Bespoke Artworks</p>
+    <h2>Request a<br><em>new painting.</em></h2>
+    <p>
+      Can't find exactly what you're looking for? Commission a fully bespoke, original painting created just for you. Share your vision, and Aayushi will bring it to life on canvas.
+    </p>
+    <div class="commission-perks stagger">
+      <div class="commission-perk">
+        <span class="perk-icon">🎨</span>
+        <div class="perk-text">
+          <h4>Fully Personalized</h4>
+          <p>Tell us the subject, size, color mood, and style — we handle the rest.</p>
+        </div>
+      </div>
+      <div class="commission-perk">
+        <span class="perk-icon">✍️</span>
+        <div class="perk-text">
+          <h4>Artist Signed</h4>
+          <p>Every commission is hand-signed by Aayushi and arrives with a certificate of authenticity.</p>
+        </div>
+      </div>
+      <div class="commission-perk">
+        <span class="perk-icon">📦</span>
+        <div class="perk-text">
+          <h4>Delivered with Care</h4>
+          <p>Artworks are carefully packaged and shipped across India within 2-3 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="commission-right reveal-right">
+    <form class="commission-form contact-form" action="https://formspree.io/f/xnjokkob" method="POST">
+      <h2 style="color:var(--cream); font-family:var(--font-display); font-size:2rem; margin-bottom:2rem; font-weight:300;">Tell me your vision.</h2>
+      <input type="hidden" name="_subject" value="New Commission Request — Brush It Off">
+
+      <div class="form-group">
+        <label for="c-name">Your Name</label>
+        <input type="text" id="c-name" name="name" placeholder="e.g. Priya Sharma" required>
+      </div>
+      <div class="form-group">
+        <label for="c-email">Your Email</label>
+        <input type="email" id="c-email" name="email" placeholder="hello@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="c-size">Desired Size</label>
+        <select id="c-size" name="size">
+          <option value="">Select size…</option>
+          <option>A4 (Small) · ₹1,500+</option>
+          <option>A3 (Medium) · ₹2,500+</option>
+          <option>Large Canvas · ₹4,000+</option>
+          <option>Custom Size</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="c-style">Style Preference</label>
+        <select id="c-style" name="style">
+          <option value="">Art style…</option>
+          <option>Canvas Painting</option>
+          <option>Folk / Traditional</option>
+          <option>Abstract / Cubist</option>
+          <option>Mandala</option>
+          <option>Let Aayushi decide</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="c-desc">Describe Your Vision</label>
+        <textarea id="c-desc" name="vision" placeholder="What subject, mood, colors, or story would you like captured?…" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;background:var(--gold);color:var(--ink);">
+        Send Commission Request →
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="logo-wrap nav-link" style="margin-bottom:1.5rem;display:flex;">
+      <img src="assets/logo.jpg" alt="Logo" onerror="this.style.display='none'">Brush It Off
+    </a>
+    <p>Original paintings by Aayushi. All artworks are unique and signed by the artist.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="gallery.html" class="nav-link">Exhibition</a>
+    <a href="about.html" class="nav-link">Artist</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://www.instagram.com/brush_it_0ff/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="mailto:rajsinhaaayushifr16@gmail.com">Email</a>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Brush It Off by Aayushi.</span>
+    <span>All artworks are original & hand-painted.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
